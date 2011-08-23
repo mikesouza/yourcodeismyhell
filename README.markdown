@@ -11,8 +11,8 @@ How to submit a post:
 3.  Add a post to source/_posts using Markdown or Textile formatting.  View the other posts for examples.
 4.  Upload the offending code to a [gist](https://gist.github.com/)
 5.  Embed the gist into your post using: {% gist gist_id [filename] %}, omitting [filename] if only one file.
-6.  *git add* post_file
-7.  *git commit*
+6.  **git add** post_file
+7.  **git commit**
 8.  Submit a pull request on GitHub
 
 
