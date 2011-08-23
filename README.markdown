@@ -2,9 +2,18 @@
 1. **_YouR_C0dE = "My Hell" or YC = "MH" for short** is a community site designed to make us all better developers/programmers/hackers.
 2. **YC = "MH" is powered by OctoPress**, which you can read about below.
 3. **YC = "MH" intends to be a repository of fun, insightful, and hilarious code snippets** with stories to tell. Think "TheDailyWTF" but with more collaboration.
-4. **To submit, create a gist on github and send it to us**. We'll pull it right into the repo.
+##4. **To submit, create a gist on github and send it to us**. We'll pull it right into the repo.
 
+How to submit a post:
 
+1.  **Fork** YC = "MH" on [GitHub](https://github.com/steveturner/yourcodeismyhell)
+2.  **git clone** git@github.com:*yourname*/yourcodeismyhell.git
+3.  Add a post to source/_posts using Markdown or Textile formatting.  View the other posts for examples.
+4.  Upload the offending code to a [gist](https://gist.github.com/)
+5.  Embed the gist into your post using: {% gist gist_id [filename] %}, omitting [filename] if only one file.
+6.  *git add* post_file
+7.  *git commit*
+8.  Submit a pull request on GitHub
 
 
 
