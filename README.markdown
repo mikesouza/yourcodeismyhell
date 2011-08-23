@@ -1,8 +1,8 @@
 ## What is Your Code is My Hell?
-1. ** _YouR_C0dE = "My Hell" or YC = "MH" for short is a community site designed to make us all better developers/programmers/hackers.
-2. ** YC = "MH" is powered by OctoPress, which you can read about below.
-3. ** YC = "MH" intends to be a repository of fun, insightful, and hilarious code snippets with stories to tell. Think "TheDailyWTF" but with more collaboration.
-4. ** To submit, create a gist on github and send it to us. We'll pull it right into the repo.
+1. ** _YouR_C0dE = "My Hell" or YC = "MH" for short** is a community site designed to make us all better developers/programmers/hackers.
+2. ** YC = "MH" is powered by OctoPress**, which you can read about below.
+3. ** YC = "MH" intends to be a repository of fun, insightful, and hilarious code snippets** with stories to tell. Think "TheDailyWTF" but with more collaboration.
+4. ** To submit, create a gist on github and send it to us**. We'll pull it right into the repo.
 
 
 
