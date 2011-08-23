@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Your Code is My Hell</title>
+  <link href="http://yourcodeismyhell.com/atom.xml" rel="self"/>
+  <link href="http://yourcodeismyhell.com/"/>
+  <updated>2011-08-22T23:47:32-06:00</updated>
+  <id>http://yourcodeismyhell.com/</id>
+  <author>
+    <name>YCMH</name>
+    
+  </author>
+
+  
+</feed>
