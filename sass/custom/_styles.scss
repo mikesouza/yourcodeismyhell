@@ -1,2 +1,20 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+article li { em { color: mix($text-color-light, $text-color); }}
+
+#logo {
+    background: transparent url("/images/logo.png") no-repeat scroll 0% 0%;
+    width: 916px;
+    height: 81px;
+    text-indent: -3333px;
+    border: 0;
+    margin: 0;
+}
+
+#logo a {
+    display: block;
+    width: 940; /* larger than actual image? */
+    height: 120px;
+    text-decoration: none;
+    border: 0;
+}
