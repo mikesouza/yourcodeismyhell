@@ -22,8 +22,8 @@ $indented-lists: false !default;
   clear: left;
   margin: 0;
   padding: 0 $pad-medium 1px;
-  background-color: lighten($sidebar-bg, 2);
-  border-top: 1px solid lighten($sidebar-border, 4);
+ // background-color: lighten($sidebar-bg, 2);
+  //border-top: 1px solid lighten($sidebar-border, 4);
   section {
     &.odd, &.even { float: left; width: 48%; }
     &.odd { margin-left: 0; }
@@ -70,8 +70,8 @@ body {
 aside[role=sidebar] {
   float: none;
   padding: 0 $pad-min 1px;
-  background-color: lighten($sidebar-bg, 2);
-  border-top: 1px solid $sidebar-border;
+ // background-color: lighten($sidebar-bg, 2);
+  //border-top: 1px solid $sidebar-border;
   @extend .group;
 }
 

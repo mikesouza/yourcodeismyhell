@@ -2,8 +2,8 @@
   @include box-shadow(lighten($sidebar-bg, 5) 0 1px);
 }
 aside[role=sidebar] {
-  color: $sidebar-color;
-  text-shadow: lighten($sidebar-bg, 8) 0 1px;
+//  color: $sidebar-color;
+  // text-shadow: lighten($sidebar-bg, 8) 0 1px;
   a { @extend .force-wrap; }
   section {
     @extend .sans;
@@ -65,7 +65,7 @@ aside[role=sidebar] {
     width: 9px;
     cursor: pointer;
     &:hover {
-      background: mix($sidebar-border, $sidebar-bg);
+      //background: mix($sidebar-border, $sidebar-bg);
       @include background(linear-gradient(left, rgba($sidebar-border, .5), rgba($sidebar-border, 0)));
     }
     &:after {
