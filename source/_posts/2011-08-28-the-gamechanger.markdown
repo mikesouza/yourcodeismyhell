@@ -13,7 +13,7 @@ He frowned, and prodded me again,
 
 "Well...," he immediately frowned again and I stammered, "The code is there to do multiplayer but
 I haven't been able to finish it yet." At this point in time, Ryan, Mike, and myself were roughly 45 minutes out from presenting our final project
-for a game design class to a roughly 100 people. 
+for a game design class to roughly 100 people. 
 
 
 The game was a top down space shooter. Beginning in the fall, the class aimed to teach
