@@ -1,12 +1,12 @@
 article {
   overflow: hidden;
-  padding-top: 1em;
+  padding-top: 0.1em;
   a { @extend .force-wrap; }
   header {
     position: relative;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
+    padding-top: 0.1em;;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.1em;
     background: $img-border bottom left repeat-x;
     h1 {
       margin: 0;
@@ -24,13 +24,13 @@ article {
       }
     }
     @media only screen and (min-width: 768px) {
-      margin-bottom: 1.5em;
-      padding-bottom: 1em;
+      margin-bottom: 0.1em;
+      padding-bottom: 0.1em;
       background: $img-border bottom left repeat-x;
     }
   }
   h2 {
-    padding-top: 0.8em;
+    padding-top: 0.1em;;
     background: $img-border top left repeat-x;
   }
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
