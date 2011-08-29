@@ -4,12 +4,201 @@
   <title>Your Code is My Hell</title>
   <link href="http://yourcodeismyhell.com/atom.xml" rel="self"/>
   <link href="http://yourcodeismyhell.com/"/>
-  <updated>2011-08-23T00:05:33-06:00</updated>
+  <updated>2011-08-28T23:29:36-06:00</updated>
   <id>http://yourcodeismyhell.com/</id>
   <author>
-    <name>YCMH</name>
+    <name>Ryan McGreevy & Steven Turner</name>
     
   </author>
 
+  
+  <entry>
+    <title>The Gamechanger</title>
+    <link href="http://yourcodeismyhell.com/sniffs/2011/08/28/the-gamechanger/"/>
+    <updated>2011-08-28T22:14:00-06:00</updated>
+    <id>http://yourcodeismyhell.com/sniffs/2011/08/28/the-gamechanger</id>
+    <content type="html">&lt;h2&gt;&quot;You can't die?&quot;&lt;/h2&gt;
+
+&lt;p&gt;&quot;Well no, I didn't get to implement that logic,&quot;
+I replied to our game design professor.
+He frowned, and prodded me again,&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&quot;What about the multiplayer functionality?&quot;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&quot;Well...,&quot; he immediately frowned again and I stammered, &quot;The code is there to do multiplayer but
+I haven't been able to finish it yet.&quot; At this point in time, Ryan, Mike, and myself were roughly 45 minutes out from presenting our final project
+for a game design class to a roughly 100 people.&lt;/p&gt;
+
+&lt;p&gt;The game was a top down space shooter. Beginning in the fall, the class aimed to teach
+students how to craft a game using the Microsoft XNA framework with a capstone presentation and playable game. From the start, we wanted a multiplayer game.
+We also wanted some sort of physics mechanic. We had grand visions... this was going to be a fantastic game.
+&lt;img class='' src='http://thesecondcoming.googlecode.com/svn/trunk/data/textures/Umbrarak.png' width='' height='' alt='' title=''&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+
+&lt;p&gt;Early on in the semester, we were doing well. We had adopted a game engine for XNA. Mike was hard at work on the sprites and audio. At the first milestone,
+we were the only team that even had a moveable player sprite!&lt;/p&gt;
+
+&lt;p&gt;I recall laughing at the other teams. They were crashing. I had built a level editor. They had no artwork. We had a &lt;em&gt;soundtrack&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;At the second milestone, a month before finals, the other teams had caught up. I was still confident. Ryan had finished the AI for enemies. Mike's artwork was fantastic.
+I had built a few levels with my editor and you could play through them and kill the bosses.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class='' src='http://thesecondcoming.googlecode.com/svn/trunk/data/textures/chromothanim.png' width='' height='' alt='&quot;The Chromoth Boss&quot;' title='&quot;The Chromoth Boss&quot;'&gt;&lt;/p&gt;
+
+&lt;p&gt;The night before the presentation, I stayed up coding furiously trying to polish and implement all of the features we had promised. Birds were chirping, I had to call it quits.
+All during classes the next day, I was sweating lead. I had left the code in a state that would build and run successfully, but a &lt;em&gt;lot&lt;/em&gt; of our design was missing. Finally, out of class
+I met up with my teamates. We got to work, tweaking this and that. We happily fired up our game for our professor to gut-check before the presentation.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&quot;How do I know if I've won or not?&quot;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Dang!&lt;/em&gt; We started typing feverishly. It all came together in one method.&lt;/p&gt;
+
+&lt;p&gt;``` csharp&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  void _checkLevel();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;This method was located in &quot;SinglePlayerLevel.cs&quot; yet this was a multiplayer game. I never got around to refactoring. Just to be clear, I added a comment at the top:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&quot;Set up all of the objects for the level. Very Important!&quot;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ignoring the naming convention of the method signature, you'll find this method performs the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Checks if a player is dead&lt;/li&gt;
+&lt;li&gt;Counts down to determine if they need to respawn&lt;/li&gt;
+&lt;li&gt;If the other player is still alive it respawns the dead player.&lt;/li&gt;
+&lt;li&gt;If both players are dead it proceeds to the &quot;Game Over&quot; screen (ahem... screen 5 hardcoded)&lt;/li&gt;
+&lt;li&gt;Finally if the last boss is dead (null) and we're on the last level.. display the winning screen.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;You can see below just how poorly written it was. Overall, the entire game was &lt;em&gt;poorly&lt;/em&gt; written and I'm glad _My_C0dE=&quot;My Hell&quot;.  But, we delivered &lt;em&gt;something&lt;/em&gt; and that felt great.&lt;/p&gt;
+
+&lt;p&gt;Since this is the first post, we welcome all forms of criticism. Comment, fork, and contribute. Share your hellish stories.&lt;/p&gt;
+
+&lt;div&gt;&lt;script src='https://gist.github.com/1177756.js?file='&gt;&lt;/script&gt;
+&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;        /// &amp;lt;summary&amp;gt;
+        /// Set up all of the objects for the level. Very Important!
+        /// &amp;lt;/summary&amp;gt;
+        ///
+
+        void _checkLevel()
+        {
+
+
+
+            if (_playerGroup.FindObject(&amp;quot;Player1&amp;quot;, false) == null &amp;amp;&amp;amp; _playerGroup.FindObject(&amp;quot;Player2&amp;quot;, false) != null)
+            {
+                if (_playerCountdownToSpawn &amp;gt; 0f)
+                {
+                    _playerCountdownToSpawn -= 1.0f;
+                }
+                if (_playerCountdownToSpawn &amp;lt;= 0f)
+                {
+                    T2DSceneObject playerloc2 = (T2DSceneObject)_playerGroup.FindObject(&amp;quot;Player2&amp;quot;, false);
+                    Vector2 playerlocat2 = playerloc2.Position;
+
+                    SinglePlayerLevel.Instance._playerGroup.ExplicitCreate(0, _playerGroup.GetPlayerIndex(playerloc2), MyGame.TankTypes.Light, false, Convert.ToInt32(playerlocat2.X) + 10, Convert.ToInt32(playerlocat2.Y));
+                    _playerGroup.FindObject(&amp;quot;Player1&amp;quot;, false).Components.FindComponent&amp;lt;PlayerControlComponent&amp;gt;().setavailableWeapons(&amp;quot;Pistol&amp;quot;);
+                    _playerGroup.FindObject(&amp;quot;Player1&amp;quot;, false).Components.FindComponent&amp;lt;PlayerControlComponent&amp;gt;().setweaponType(&amp;quot;Pistol&amp;quot;);
+                    _playerGroup.SetAllPlayerInput(true);
+                    _playerCountdownToSpawn = 300.0f;
+                }
+            }
+
+            if (_playerGroup.FindObject(&amp;quot;Player2&amp;quot;, false) == null &amp;amp;&amp;amp; _playerGroup.FindObject(&amp;quot;Player1&amp;quot;, false) != null)
+            {
+                if (_playerCountdownToSpawn &amp;gt; 0f)
+                {
+                    _playerCountdownToSpawn -= 1.0f;
+                }
+                if (_playerCountdownToSpawn &amp;lt;= 0f)
+                {
+                    T2DSceneObject playerloc1 = (T2DSceneObject)_playerGroup.FindObject(&amp;quot;Player1&amp;quot;, false);
+                    Vector2 playerlocat1 = playerloc1.Position;
+
+                    SinglePlayerLevel.Instance._playerGroup.ExplicitCreate(1, _playerGroup.GetPlayerIndex(playerloc1), MyGame.TankTypes.Light, false, Convert.ToInt32(playerlocat1.X) + 10, Convert.ToInt32(playerlocat1.Y));
+                    _playerGroup.FindObject(&amp;quot;Player2&amp;quot;, false).Components.FindComponent&amp;lt;PlayerControlComponent&amp;gt;().setavailableWeapons(&amp;quot;Scythe&amp;quot;);
+                    _playerGroup.FindObject(&amp;quot;Player2&amp;quot;, false).Components.FindComponent&amp;lt;PlayerControlComponent&amp;gt;().setavailableWeapons(&amp;quot;GrapHook&amp;quot;);
+                    _playerGroup.FindObject(&amp;quot;Player2&amp;quot;, false).Components.FindComponent&amp;lt;PlayerControlComponent&amp;gt;().setweaponType(&amp;quot;GrapHook&amp;quot;);
+
+                    _playerGroup.SetAllPlayerInput(true);
+                    _playerCountdownToSpawn = 300.0f;
+
+                }
+            }
+
+
+
+
+            if (_playerGroup.GetNumObjects() &amp;lt;= 0)
+            {
+                GUITextStyle textStyle = new GUITextStyle();
+                textStyle.SizeToText = true;
+                textStyle.FontType = &amp;quot;arial22&amp;quot;;
+                if (_splash == null)
+                {
+                    _splash = (T2DSceneObject)GameData.Instance.GetBattleground(5).Clone();
+                    _splash.Size = new Vector2(1280, 1024);
+                    _splash.Layer = 2;
+                    _splash.Position = _sceneCam.Position;
+                    TorqueObjectDatabase.Instance.Register(_splash);
+                    GameData.Instance.StopMenuMusic();
+
+                    GameData.Instance.StartMenuMusic(&amp;quot;Death Music 1&amp;quot;);
+                }
+
+            }
+
+            if (_aiPlayerGroup.FindObject(&amp;quot;Chromoth&amp;quot;, false) == null)
+            {
+
+                if (_levelnumber == 3)
+                {
+                    _levelSplash = (T2DSceneObject)GameData.Instance.GetBattleground(6).Clone();
+                    _levelSplash.Size = new Vector2(1280, 1024);
+                    _levelSplash.Position = _sceneCam.Position;
+                    _levelSplash.Visible = true;
+                    _levelSplash.Layer = 0;
+                    _CountdownToSplash = 900.0f;
+                    TorqueObjectDatabase.Instance.Register(_levelSplash);
+                   // GameData.Instance.StartMenuMusic(&amp;quot;music1&amp;quot;);
+                }
+
+
+            }
+            if (_levelSplash.Visible == true)
+            {
+                _CountdownToSplash -= 1.0f;
+
+
+            }
+
+            if (_CountdownToSplash &amp;lt;= 0.0f)
+            {
+                _levelSplash.Visible = false;
+                if (_levelnumber == 3)
+                {
+                    GameData.Instance.StartMenuMusic(&amp;quot;Boss Music 1&amp;quot;);
+                }
+                else
+                {
+                    GameData.Instance.StartMenuMusic(&amp;quot;music1&amp;quot;);
+                }
+
+               // TorqueObjectDatabase.Instance.Unregister(_levelSplash);
+            }
+
+        }&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
+
+
+
+</content>
+  </entry>
   
 </feed>
